@@ -1,0 +1,35 @@
+** DESCRIPTION ***
+
+This is a simple web app using Google Places API, IP Location API (could easily be extended to GPS tracking 
+for Android and iOS devices), and FitBit API that lets users send (stores the info in a DB for now) Emergency 
+Room (ER) processing requests to the nearest hospital in cases of various injuries. The idea is that the patients 
+will help alleviate wait times in hospitals by providing information enabling doctors and nurses to being the 
+triage process in advance, before the patients arrive to their closest hospital effectively. The use of the 
+FitBit API allows the collection and dispatch of real-time heart rate information onm patients for a more accurate 
+diagnosis. Additionally, patients will provide a short description of their injuries in order to complete a 
+preliminary triage phase before even showing up to a hospital. Ideally, the app, once hosted, would allow anyone, 
+not simply registered patients, to make requests for persons that aren't necessarily themselves. The finalized project
+would also allow for a time estimation as well as displaying the waitlist position in which the patient is placed
+after sending a request. This would also require spam filtering and/or background checking the users of the web app.
+
+*** PREREQUISITES ***
+
+-NodeJS installed on the host machine. 
+-A working MongoDB locally hosted server (on the web app's domain) on the default port (27017).
+-Replace all URLs starting with '10.202' to the domain your server is hosted on (use localhost if you don't have a domain).
+-A working FitBit connected to their official website and linked with your account (not necessary, but recommended).
+-A valid SSL certificate (the one provided is self-signed).
+
+*** USAGE ***
+
+-Open a command-line interpreter and execute NodeJS with the 'app.js' script included in the root project folder.
+-Open any browser and access the app's domain on port 3000 for HTTP and port 3001 for HTTPS.
+-Register and login through the provided interface.
+-Send and view requests you've sent through the provided links.
+-Additionally, admin users have access to the user database.
+
+*** TODO ***
+
+-Actually send the information to hospitals.
+-Use GPS location for mobile devices.
+-Beautify the interface with JS client-side animations.

@@ -1,0 +1,100 @@
+﻿<h2 class="page-header text-center" style="margin-top:2em;">ER Request Form</h2>
+{{#if errors}}
+{{#each errors}}
+<div class="alert alert-danger" style="color:red;">{{msg}}</div>
+{{/each}}
+{{/if}}
+<form method="post" action="/requests/new">
+    <div class="form-group">
+        <label class="text-center"><h4><strong>Please select the area(s) in which you feel pain:</strong></h4></label><br />
+        <div>
+            <div class="col-sm-3">
+                <label class="form-check form-check">
+                    <input class="form-check-input" type="checkbox" name="a_head">
+                    <span class="form-check-label">Head</span>
+                </label>
+                <br />
+                <label class="form-check form-check">
+                    <input class="form-check-input" type="checkbox" name="a_torso">
+                    <span class="form-check-label">Torso</span>
+                </label>
+            </div>
+            <div class="col-sm-3">
+                <label class="form-check form-check">
+                    <input class="form-check-input" type="checkbox" name="a_larm">
+                    <span class="form-check-label">Left Arm</span>
+                </label>
+                <br />
+                <label class="form-check form-check">
+                    <input class="form-check-input" type="checkbox" name="a_rarm">
+                    <span class="form-check-label">Right Arm</span>
+                </label>
+            </div>
+            <div class="col-sm-3">
+                <label class="form-check form-check">
+                    <input class="form-check-input" type="checkbox" name="a_lhand">
+                    <span class="form-check-label">Left Hand</span>
+                </label>
+                <br />
+                <label class="form-check form-check">
+                    <input class="form-check-input" type="checkbox" name="a_rhand">
+                    <span class="form-check-label">Right Hand</span>
+                </label>
+            </div>
+            <div class="col-sm-3">
+                <label class="form-check form-check">
+                    <input class="form-check-input" type="checkbox" name="a_lleg">
+                    <span class="form-check-label">Left Leg</span>
+                </label>
+                <br />
+                <label class="form-check form-check">
+                    <input class="form-check-input" type="checkbox" name="a_rleg">
+                    <span class="form-check-label">Right Leg</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group" style="margin-top: 6em;margin-bottom: 3em;">
+        <label class="text-center"><h4><strong>Please select the category(ies) that best correspond to your injury:</strong></h4></label><br />
+        <div>
+            <div class="col-sm-12" style="margin-bottom: 1em;">
+                <label class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="breathing">
+                    <span class="form-check-label">Trouble Breathing</span>
+                </label>
+                <br />
+                <label class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="bleeding">
+                    <span class="form-check-label">Small Bleeding Wound</span>
+                </label>
+                <br />
+                <label class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="gash">
+                    <span class="form-check-label">Large Gash</span>
+                </label>
+                <br />
+                <label class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="fracture">
+                    <span class="form-check-label">Fracture</span>
+                </label>
+                <br />
+                <label class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="burn">
+                    <span class="form-check-label">Burn</span>
+                </label>
+                <br />
+                <label class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" name="fever">
+                    <span class="form-check-label">Fever</span>
+                </label>
+            </div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label><h4><strong>Please rate the pain on a scale from 1 to 10:</strong></h4></label>
+        <input type="number" class="form-control" placeholder="Pain Rating" name="painScale">
+    </div>
+    <div class="text-center">
+        <input type="submit" value="Submit" class="btn btn-default">
+    </div>
+</form>

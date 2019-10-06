@@ -1,0 +1,24 @@
+﻿<table class="table">
+    <thead>
+        <tr>
+            <th class="text-center" scope="col">Time</th>
+            <th class="text-center" scope="col">Areas</th>
+            <th class="text-center" scope="col">Vitals</th>
+            <th class="text-center" scope="col">Pain Rating</th>
+            <th class="text-center" scope="col">Heart Rate Data</th>
+            <th class="text-center" scope="col">Sent To</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each requests}}
+        <tr>
+            <td class="text-center">{{time}}</td>
+            <td class="text-center">{{areas}}</td>
+            <td class="text-center">{{vitals}}</td>
+            <td class="text-center">{{painScale}}</td>
+            <td class="text-center">{{heart_rate_data}}</td>
+            <td class="text-center">{{sent_to}}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

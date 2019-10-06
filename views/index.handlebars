@@ -1,0 +1,16 @@
+<h2 class="page-header text-center" style="margin-top:2em;">Dashboard{{#if user.admin}} (Admin){{/if}}</h2>
+<p>Welcome {{user.first_name}} {{user.last_name}}!</p>
+
+{{#if user.fitbit_profile}}
+<br />
+<p><strong>Currently connected FitBit account : </strong></p>
+{{user.fitbit_profile}}
+<br />
+{{/if}}
+
+{{#if last}}
+<br />
+<p><strong>Last ER request : </strong></p>
+{{last.time}} - Placed At {{last.sent_to}} - {{last.prelim_triage}}
+<br />
+{{/if}}
